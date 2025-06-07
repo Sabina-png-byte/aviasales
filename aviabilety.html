@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авиабилеты | Skyline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Skyline</div>
+    <input type="checkbox" id="toggle-menu">
+    <label for="toggle-menu" class="burger"><i class="ri-menu-line"></i></label>
+    <ul class="menu">
+      <li><a href="luchshie.html">Лучшие</a></li>
+      <li><a href="aviabilety.html">Авиабилеты</a></li>
+      <li><a href="oteli.html">Отели</a></li>
+      <li><a href="zabronirovat.html">Забронировать</a></li>
+      <li><a href="contact.html">Контакт</a></li>
+    </ul>
+    <div class="icons">
+      <a href="#search"><i class="ri-search-line"></i></a>
+      <a href="#cart"><i class="ri-shopping-cart-line"></i></a>
+      <a href="#profile"><i class="ri-user-line"></i></a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="tickets-search">
+      <div class="search-container">
+        <h2>Поиск авиабилетов</h2>
+        <form class="search-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="from">Откуда</label>
+              <input type="text" id="from" name="from" placeholder="Город или аэропорт" required>
+            </div>
+            <div class="form-group">
+              <label for="to">Куда</label>
+              <input type="text" id="to" name="to" placeholder="Город или аэропорт" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="departure">Туда</label>
+              <input type="date" id="departure" name="departure" required>
+            </div>
+            <div class="form-group">
+              <label for="return">Обратно</label>
+              <input type="date" id="return" name="return">
+            </div>
+            <div class="form-group">
+              <label for="passengers">Пассажиры</label>
+              <select id="passengers" name="passengers" required>
+                <option value="1">1 пассажир</option>
+                <option value="2">2 пассажира</option>
+                <option value="3">3 пассажира</option>
+                <option value="4">4 пассажира</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Найти билеты</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="popular-routes">
+      <h3>Популярные направления</h3>
+
+      <!-- Из Бишкека -->
+      <h4 class="route-group-title">Из Бишкека</h4>
+      <div class="routes-grid">
+        <div class="route-card">
+          <img src="./stambul.jpg" alt="Стамбул">
+          <h4>Бишкек - Стамбул</h4>
+          <p>от 22 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./dubai.jpg" alt="Дубай">
+          <h4>Бишкек - Дубай</h4>
+          <p>от 24 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./novosibirsk.jpg" alt="Новосибирск">
+          <h4>Бишкек - Новосибирск</h4>
+          <p>от 12 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./moskva.jpg" alt="Москва">
+          <h4>Бишкек - Москва</h4>
+          <p>от 15 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./antalya.jpg" alt="Анталья">
+          <h4>Бишкек - Анталья</h4>
+          <p>от 20 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./tashkent.jpg" alt="Ташкент">
+          <h4>Бишкек - Ташкент</h4>
+          <p>от 5 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./almaty.jpg" alt="Алматы">
+          <h4>Бишкек - Алматы</h4>
+          <p>от 5 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./paris.jpg" alt="Париж">
+          <h4>Бишкек - Париж</h4>
+          <p>от 25 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./berlin.jpg" alt="Берлин">
+          <h4>Бишкек - Берлин</h4>
+          <p>от 23 000 сом</p>
+        </div>
+      </div>
+
+      <!-- Из Оша -->
+      <h4 class="route-group-title">Из Оша</h4>
+      <div class="routes-grid">
+        <div class="route-card">
+          <img src="./bishkek.jpg" alt="Бишкек">
+          <h4>Ош - Бишкек</h4>
+          <p>от 3 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./stambul.jpg" alt="Стамбул">
+          <h4>Ош - Стамбул</h4>
+          <p>от 13 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./dubai.jpg" alt="Дубай">
+          <h4>Ош - Дубай</h4>
+          <p>от 17 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./moskva.jpg" alt="Москва">
+          <h4>Ош - Москва</h4>
+          <p>от 11 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./tashkent.jpg" alt="Ташкент">
+          <h4>Ош - Ташкент</h4>
+          <p>от 6 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./korea.jpg" alt="Южная Корея">
+          <h4>Ош - Южная Корея</h4>
+          <p>от 30 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./frank.jpg" alt="Франкфурт">
+          <h4>Ош - Франкфурт</h4>
+          <p>от 24 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./almaty.jpg" alt="Алматы">
+          <h4>Ош - Алматы</h4>
+          <p>от 4 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./doxa.jpg" alt="Доха">
+          <h4>Ош - Доха</h4>
+          <p>от 20 000 сом</p>
+        </div>
+      </div>
+
+      <!-- Из Жалал-Абада -->
+      <h4 class="route-group-title">Из Жалал-Абада</h4>
+      <div class="routes-grid">
+        <div class="route-card">
+          <img src="./bishkek.jpg" alt="Бишкек">
+          <h4>Жалал-Абад - Бишкек</h4>
+          <p>от 3 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./osh.jpg" alt="Ош">
+          <h4>Жалал-Абад - Ош</h4>
+          <p>от 2 500 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./talas.jpg" alt="Талас">
+          <h4>Жалал-Абад - Талас</h4>
+          <p>от 4 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./batken.jpg" alt="Баткен">
+          <h4>Жалал-Абад - Баткен</h4>
+          <p>от 5 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./kerben.jpg" alt="Кербен">
+          <h4>Жалал-Абад - Кербен</h4>
+          <p>от 2 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./ysyk-kol.jpg" alt="Ысык-Кол">
+          <h4>Жалал-Абад - Ысык-Кол</h4>
+          <p>от 3 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./tashkent.jpg" alt="Ташкент">
+          <h4>Жалал-Абад - Ташкент</h4>
+          <p>от 13 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./moskva.jpg" alt="Москва">
+          <h4>Жалал-Абад - Москва</h4>
+          <p>от 11 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./almaty.jpg" alt="Алматы">
+          <h4>Жалал-Абад - Алматы</h4>
+          <p>от 6 000 сом</p>
+        </div>
+      </div>
+
+      <!-- Из Ысык-Коля -->
+      <h4 class="route-group-title">Из Ысык-Коля</h4>
+      <div class="routes-grid">
+        <div class="route-card">
+          <img src="./bishkek.jpg" alt="Бишкек">
+          <h4>Ысык-Кол - Бишкек</h4>
+          <p>от 3 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./stambul.jpg" alt="Стамбул">
+          <h4>Ысык-Кол - Стамбул</h4>
+          <p>от 13 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./dubai.jpg" alt="Дубай">
+          <h4>Ысык-Кол - Дубай</h4>
+          <p>от 17 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./moskva.jpg" alt="Москва">
+          <h4>Ысык-Кол - Москва</h4>
+          <p>от 11 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./tashkent.jpg" alt="Ташкент">
+          <h4>Ысык-Кол - Ташкент</h4>
+          <p>от 6 000 сом</p>
+        </div>
+        <div class="route-card">
+          <img src="./kazan.jpg" alt="Казань">
+          <h4>Ысык-Кол - Казань</h4>
+          <p>от 14 000 сом</p>
+        </div>
+      </div>
+   <h2>Наши оффлайн и онлайн билеты</h2>
+
+<div class="ticket-row">
+  <div class="ticket">
+    <h3>оффлайн</h3>
+    <img src="./biletof.jpg" alt="оффлайн билет">
+  </div>
+  <div class="ticket">
+    <h3>онлайн</h3>
+    <img src="./bileton.jpg" alt="онлайн билет">
+  </div>
+</div>
+  
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Skyline. Все права защищены.</p>
+  </footer>
+</body>
+</html>

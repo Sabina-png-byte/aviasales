@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skyline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Skyline</div>
+    <input type="checkbox" id="toggle-menu">
+    <label for="toggle-menu" class="burger"><i class="ri-menu-line"></i></label>
+    <ul class="menu">
+      <li><a href="luchshie.html">Лучшие</a></li>
+      <li><a href="aviabilety.html">Авиабилеты</a></li>
+      <li><a href="oteli.html">Отели</a></li>
+      <li><a href="zabronirovat.html">Забронировать</a></li>
+      <li><a href="contact.html">Контакт</a></li>
+    </ul>
+      <div class="icons">
+      <a href="#search"><i class="ri-search-line"></i></a>
+      <a href="#cart"><i class="ri-shopping-cart-line"></i></a>
+      <a href="#profile"><i class="ri-user-line"></i></a>
+    </div>
+  </nav>
+  <main class="contact-container">
+    <section class="contact-info">
+      <h2>Свяжитесь с нами</h2>
+      <p>Если у вас есть вопросы или предложения — свяжитесь с нами. Мы всегда рады помочь!</p>
+      <ul>
+        <li>📍 Bishkek</li>
+        <li>📞 +996222210200</li>
+        <li>📧 sabinatashbolotova2@gmail.com</li>
+      </ul>
+    </section>
+
+    <section class="contact-form">
+      <h2>Форма обратной связи</h2>
+      <form action="mailto:sabinatashbolotova2@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Имя*" required>
+        <input type="email" name="email" placeholder="Электронная почта*" required>
+        <textarea name="message" placeholder="Ваше сообщение*" required></textarea>
+        <button type="submit">ОТПРАВИТЬ</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Skyline. Все права защищены.</p>
+  </footer>
+</body>
+</html>

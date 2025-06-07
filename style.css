@@ -1,0 +1,557 @@
+:root {
+  --primary: #0066cc;
+  --primary-dark: #004d99;
+  --secondary: #ff7e33;
+  --accent-color: #e74c3c;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --gray: #6c757d;
+  --light-gray: #e9ecef;
+  --text-color: #333;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --secondary-color: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+  background-color: #f5f7fa;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar, .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu, .navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.menu li a, .navbar a {
+  font-weight: 600;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.menu li a:hover, .navbar a:hover, .navbar a.active {
+  color: var(--primary);
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.icons a {
+  font-size: 1.2rem;
+  color: var(--gray);
+  transition: color 0.3s;
+}
+
+.icons a:hover {
+  color: var(--primary);
+}
+
+#toggle-menu {
+  display: none;
+}
+
+.burger, .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero h4 {
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  color: var(--gray);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.rotating-logo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  animation: rotate 10s linear infinite;
+  box-shadow: 0 0 20px rgba(0, 102, 204, 0.5);
+  border: 3px solid rgba(0, 102, 204, 0.2);
+}
+
+.rotating-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotating-logo:hover {
+  animation: rotate 5s linear infinite, pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: rotate(0deg) scale(1);
+    box-shadow: 0 0 20px rgba(0, 102, 204, 0.5);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 102, 204, 0.8);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    box-shadow: 0 0 20px rgba(0, 102, 204, 0.5);
+  }
+}
+
+.planes-grid, .offers-grid, .routes-grid, .hotels-grid, .hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.plane-card, .offer-card, .route-card, .hotel-card {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.plane-card:hover, .offer-card:hover, .route-card:hover, .hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.plane-card img, .offer-card img, .route-card img, .hotel-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.plane-info, .offer-info, .hotel-info {
+  padding: 1.5rem;
+}
+
+.plane-info h3, .offer-info h3, .route-card h4, .hotel-info h4 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.heart input {
+  display: none;
+}
+
+.heart-icon {
+  width: 28px;
+  height: 28px;
+  fill: #ccc;
+  transition: fill 0.3s ease, transform 0.2s ease;
+}
+
+.heart input:checked + .heart-icon {
+  fill: red;
+  transform: scale(1.2);
+}
+
+.capacity {
+  display: inline-block;
+  background: var(--light-gray);
+  padding: 0.3rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.price {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.current-price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.offer-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--secondary);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.rating {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.location {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.hotel-info h3 {
+  font-size: 1.3rem;
+}
+
+.hotel-img {
+  position: relative;
+}
+
+.price span {
+  font-size: 0.9rem;
+  color: #777;
+  font-weight: normal;
+}
+
+.amenities {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+  color: #555;
+}
+
+.search-form, .contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 0.3rem;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+}
+
+.btn.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.contact-section {
+  background-color: var(--light);
+  padding: 4rem 2rem;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.contact-info p,
+.contact-info a {
+  color: var(--gray);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-info i {
+  margin-right: 0.5rem;
+  color: var(--primary);
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: var(--light);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-form button {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: var(--primary-dark);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer, .footer {
+  background: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.ticket-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; 
+  margin: 2rem 0;
+  flex-wrap: wrap; 
+}
+
+.ticket {
+  text-align: center;
+}
+
+.ticket img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar, .header {
+    padding: 1rem;
+  }
+
+  .planes-grid, .offers-grid, .routes-grid, .hotels-grid, .hotel-grid {
+    padding: 0 1rem;
+  }
+
+  .menu, .navbar ul {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .burger, .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .planes-grid, .offers-grid, .routes-grid, .hotels-grid, .hotel-grid {
+    grid-template-columns: 1fr; 
+    padding: 0 0.5rem;
+  }
+}
+

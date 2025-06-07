@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бронирование | Skyline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Skyline</div>
+    <input type="checkbox" id="toggle-menu">
+    <label for="toggle-menu" class="burger"><i class="ri-menu-line"></i></label>
+    <ul class="menu">
+      <li><a href="luchshie.html">Лучшие</a></li>
+      <li><a href="aviabilety.html">Авиабилеты</a></li>
+      <li><a href="oteli.html">Отели</a></li>
+      <li><a href="zabronirovat.html">Забронировать</a></li>
+        <li><a href="contact.html">Контакт</a></li>
+    </ul>
+    <div class="icons">
+      <a href="#search"><i class="ri-search-line"></i></a>
+      <a href="#cart"><i class="ri-shopping-cart-line"></i></a>
+      <a href="#profile"><i class="ri-user-line"></i></a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="booking-section">
+      <div class="booking-container">
+        <h2>Забронировать</h2>
+        <form class="booking-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-name">Имя</label>
+              <input type="text" id="booking-name" placeholder="Ваше имя" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-email">Email</label>
+              <input type="email" id="booking-email" placeholder="Ваш email" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-phone">Телефон</label>
+              <input type="tel" id="booking-phone" placeholder="+996 () __-" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-date">Дата</label>
+              <input type="date" id="booking-date" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="booking-service">Услуга</label>
+            <select id="booking-service" required>
+              <option value="">Выберите услугу</option>
+              <option value="flight">Авиабилет</option>
+              <option value="hotel">Отель</option>
+              <option value="package">Турпакет</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="booking-comments">Комментарии</label>
+            <textarea id="booking-comments" rows="4" placeholder="Ваши пожелания"></textarea>
+          </div>
+          
+          <button type="submit" class="btn">Подтвердить бронирование</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Skyline. Все права защищены.</p>
+  </footer>
+</body>
+</html>
